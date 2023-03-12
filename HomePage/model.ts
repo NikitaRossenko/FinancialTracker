@@ -3,13 +3,16 @@ class User {
     password: string;
     incomes:Array<object>;
     expenses:Array<object>;
+    imageUrl:string;
     isAdmin:boolean;
+    
 
     constructor(username, password) {
         this.username = username;
         this.password = password;
         this.incomes = [];
         this.expenses = [];
+        this.imageUrl = ''
         this.isAdmin = false;
     }
 
@@ -46,3 +49,23 @@ enum EXPENSES_CATEGORIES {
     category: INCOME_CATEGORIES_LITERALS;
     sum: number;
   }
+
+const currentDate = new Date();
+const month: string[] = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "june",
+  "july",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+
+
+  
