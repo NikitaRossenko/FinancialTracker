@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="../public/scripts/views.js" defer></script> -->
+    <!-- <script src="../public/scripts/controller.js" defer></script> -->
+    <script src="dist/model.js" defer></script>
+    <script src="dist/register.js" defer></script>
+    <link rel="stylesheet" href="dist/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <title>Financial Tracker - Register</title>
+</head>
+<body>
+    <div class="loginAndRegisterContainer">
+        <h1>Financial Tracker</h1>
+        <div class="main">
+            <h2>Register</h2>
+            <form action="#" onsubmit="registerHandler(event)">
+                <input type="text" name="username" id="username" placeholder="Username">
+                <input type="password" name="password" id="password" placeholder="Password">
+                <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirm Password">
+                <input type="submit" name="submit" id="submitBtn">
+            </form>
+            <a href="login.html">Already have a user? Login</a>
+        </div>
+    </div>
+</body>
+</html>

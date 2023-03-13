@@ -1,3 +1,4 @@
+var _a;
 var totalRent = 0;
 var totalGrocories = 0;
 var totalEntertainment = 0;
@@ -8,19 +9,26 @@ var uidIncom = 0;
 var uidExpense = 1000;
 var sumIncom = 0;
 var sumExpense = 0;
+var userData = localStorage.getItem("isLoggedIn");
+var privateName = document.getElementById("sideBar__profile__details");
+if (privateName && userData) {
+    privateName.innerHTML = (_a = JSON.parse(userData)) === null || _a === void 0 ? void 0 : _a.username;
+}
 var divImgProfile = document.querySelector(".sideBar__user");
 var userImg = document.querySelector(".sideBar__inputImg");
 var img = document.querySelector(".sideBar__profile");
+
 logoutButton === null || logoutButton === void 0 ? void 0 : logoutButton.addEventListener('click', function (e) {
     localStorage.removeItem('isLoggedIn');
     location.href = '../../login.html';
 });
 if (!isLoggedInString) {
     location.href = '../../login.html';
+
 }
 function sumRent(sumRen) {
     totalRent += sumRen;
-    localStorage.setItem('totalRent', JSON.stringify(totalRent));
+    localStorage.setItem("totalRent", JSON.stringify(totalRent));
 }
 //when we choose a foto to upload
 userImg.addEventListener("change", function () {
@@ -41,23 +49,23 @@ userImg.addEventListener("change", function () {
 });
 function sumGrocories(sumGrocories) {
     totalGrocories += sumGrocories;
-    localStorage.setItem('totalGrocories', JSON.stringify(totalGrocories));
+    localStorage.setItem("totalGrocories", JSON.stringify(totalGrocories));
 }
 function sumEntertainment(sumEntertainment) {
     totalEntertainment += sumEntertainment;
-    localStorage.setItem('totalEntertainment', JSON.stringify(totalEntertainment));
+    localStorage.setItem("totalEntertainment", JSON.stringify(totalEntertainment));
 }
 function sumRestaurants(sumRestaurants) {
     totalRestaurants += sumRestaurants;
-    localStorage.setItem('totalRestaurants', JSON.stringify(totalRestaurants));
+    localStorage.setItem("totalRestaurants", JSON.stringify(totalRestaurants));
 }
 function sumBills(sumBills) {
     totalBills += sumBills;
-    localStorage.setItem('totalBills', JSON.stringify(totalBills));
+    localStorage.setItem("totalBills", JSON.stringify(totalBills));
 }
 function sumGeneral(sumGeneral) {
     totalGeneral += sumGeneral;
-    localStorage.setItem('totalGeneral', JSON.stringify(totalGeneral));
+    localStorage.setItem("totalGeneral", JSON.stringify(totalGeneral));
 }
 liIncome === null || liIncome === void 0 ? void 0 : liIncome.addEventListener("click", function (e) {
     enterIncome.innerHTML = "\n          <h3 class=\"income__container__titel\">Insert an incom</h3>\n          <input class=\"income__container__income\" type=\"number\">\n          <input class=\"income__container__typeIncome\" type=\"text\" placeholder=\"  Want to specify what?\">\n          <select class=\"income__container__selectTypeIncom\" >\n          <option value=\"General\">General</option>\n           <option value=\"Rent\">Rent</option>\n           <option value=\"Grocories\">Grocories</option>\n           <option value=\"Entertainment\">Entertainment</option>\n           <option value=\"Restaurants\">Restaurants</option>\n           <option value=\"Bills\">Bills</option>\n          \n           </select>\n           <button class=\"income__container__buttonAdd\">add</button>\n         ";
