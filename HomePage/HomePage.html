@@ -23,6 +23,8 @@
     <script src="./dist/controller.js" defer></script>
     <script src="./dist/helpers.js" defer></script>
     <script src="./dist/main.js" defer></script>
+    <script src="./dist/main.js" defer></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -66,9 +68,12 @@
           type="file"
           accept="image/png , image/jpg"
         />
-        <span class="sideBar__user__imageIcon  fa-sharp fa-solid fa-pen"></span>
+        <span class="sideBar__user__imageIcon fa-sharp fa-solid fa-pen"></span>
         <label for="file" id="uploadBtn">Choose Photo</label>
-        <span class="sideBar__profile__details">bob</span>
+        <div
+          id="sideBar__profile__details"
+          class="sideBar__profile__details"
+        ></div>
       </div>
 
       <ul class="sideBar__possibility">
