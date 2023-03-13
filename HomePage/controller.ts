@@ -33,7 +33,7 @@ logoutButton?.addEventListener('click', e => {
 
 if (!isLoggedInString){
     location.href = '../../login.html'
-=======
+
 if (privateName && userData) {
   privateName.innerHTML = JSON.parse(userData!)?.username;
 }
