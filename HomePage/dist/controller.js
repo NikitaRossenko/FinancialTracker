@@ -13,10 +13,10 @@ var userImg = document.querySelector(".sideBar__inputImg");
 var img = document.querySelector(".sideBar__profile");
 logoutButton === null || logoutButton === void 0 ? void 0 : logoutButton.addEventListener('click', function (e) {
     localStorage.removeItem('isLoggedIn');
-    location.href = 'login.html';
+    location.href = '../../login.html';
 });
 if (!isLoggedInString) {
-    location.href = 'login.html';
+    location.href = '../../login.html';
 }
 function sumRent(sumRen) {
     totalRent += sumRen;

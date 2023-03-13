@@ -26,11 +26,11 @@ const divImgProfile = document.querySelector(
 
 logoutButton?.addEventListener('click', e => {
     localStorage.removeItem('isLoggedIn')
-    location.href = 'login.html'
+    location.href = '../../login.html'
 })
 
 if (!isLoggedInString){
-    location.href = 'login.html'
+    location.href = '../../login.html'
 }
 function sumRent( sumRen:number):void{
     totalRent+=sumRen;
