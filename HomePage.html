@@ -4,12 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="home.css" />
-    <link rel="stylesheet" href="dist/buttonStyle.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
-    <script src="dist/view.js" defer></script>
-    <script src="dist/model.js" defer></script>
-    <script src="dist/controller.js" defer></script>
+    <link rel="stylesheet" href="./dist/home.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +13,8 @@
     />
     <script src="https://kit.fontawesome.com/9655756982.js" crossorigin="anonymous"></script>
     <script src="./dist/control.js" defer></script>
-    <title>Financial Tracker - Home</title>
+    <script src="./dist/view.js" defer></script>
+    <title>Document</title>
   </head>
   <body>
 
@@ -30,7 +26,7 @@
 
     <div class="navbar">
       <div class="navbarTitle">Financial Tracker</div>
-      <button id="logoutBtn">Logout</button>
+      <div class="logoutBtn">Log Out</div>
     </div>
 
     <div class="sideBar">
@@ -46,7 +42,7 @@
       <div class="sideBar__hamburger fa-solid fa-bars"></div>
 
       <div class="sideBar__user">
-        <img class="sideBar__profile" src="./public/images/p.png"  alt="" srcset="" />
+        <img class="sideBar__profile" src="./images/p.png"  alt="" srcset="" />
         <input class="sideBar__inputImg" type="file"  accept="image/png , image/jpg"/>
         <span class="sideBar__profile__details">bob</span>
       </div>
@@ -78,14 +74,12 @@
     
 
     <div class="categories">
-      <div id="incomeButton" onclick="toggleOptions('INCOME')"><div class="buttonText">income</div></div>
+      <div id="incomButton" onclick="toggleOptions('INCOME')"><div class="buttonText">income</div></div>
       <div id="expenseButton" onclick="toggleOptions('EXPENSE')"><div class="buttonText">expense</div></div>
     </div>
 
     <div id="expensesWrapper">
-        
-
-      <div></div>
+     
       </div>
     </div>
   </body>
