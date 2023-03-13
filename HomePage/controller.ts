@@ -13,28 +13,31 @@ let sumExpense = 0;
 const userData = localStorage.getItem("isLoggedIn");
 const privateName = document.getElementById("sideBar__profile__details");
 
+
+const divImgProfile = document.querySelector(
+    ".sideBar__user"
+  ) as HTMLDivElement;
+  const userImg = document.querySelector(
+    ".sideBar__inputImg"
+  ) as HTMLInputElement;
+  const img: any = document.querySelector(
+    ".sideBar__profile"
+  ) as HTMLImageElement;
+  
+
+
+logoutButton?.addEventListener('click', e => {
+    localStorage.removeItem('isLoggedIn')
+    location.href = '../../login.html'
+})
+
+if (!isLoggedInString){
+    location.href = '../../login.html'
+=======
 if (privateName && userData) {
   privateName.innerHTML = JSON.parse(userData!)?.username;
 }
 
-const divImgProfile = document.querySelector(
-  ".sideBar__user"
-) as HTMLDivElement;
-const userImg = document.querySelector(
-  ".sideBar__inputImg"
-) as HTMLInputElement;
-const img: any = document.querySelector(
-  ".sideBar__profile"
-) as HTMLImageElement;
-
-logoutButton?.addEventListener("click", (e) => {
-  localStorage.removeItem("isLoggedIn");
-  location.href = "login.html";
-});
-
-if (!isLoggedInString) {
-  location.href = "login.html";
-}
 function sumRent(sumRen: number): void {
   totalRent += sumRen;
   localStorage.setItem("totalRent", JSON.stringify(totalRent));
